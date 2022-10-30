@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thế Giới Hải Sản</title>
+    <link rel="stylesheet" type="text/css" href="./css/css nền.css" />
+    <link rel="stylesheet" type="text/css" href="./css/css web.css" />
+    <link rel="stylesheet" type="text/css" href="./font/css/all.min.css" />   
+    <script type="text/javascript" src="./js/jsweb.js" ></script>
+</head>
+
+<body>
+    <div class="sign"><a href="./Đăng nhập.html">Đăng nhập</a>|<a href="./Đăng kí.html">Đăng ký</a></div>
+    
+    <div class="app">
+        <header class="header">
+            <div class="header-with-search">
+
+               <div class="header__logo">
+                <a href="./Trang chủ.html"><img class="logo" src="./image/logo.png" alt=""></a>
+               </div>
+               <div class="header__search" >
+                <div class="header__search-wrap">
+                    <input class="header__search-input" value placeholder="Nhập để tìm kiếm" onkeyup="timkiem();" id="search" />
+                    <ul class="header__search-history-list"  id="goiy">
+                        <h3 class="header__search-history-heading">Gợi ý</h3>
+                        <li class="header__search-history-icon"><a href="./Tìm kiếm về cá.html">Cá</a></li>
+                        <li class="header__search-history-icon"><a href="./Tìm kiếm về tôm.html">Tôm</a></li>
+                        <li class="header__search-history-icon"><a href="./Tìm kiếm về ốc.html">Ốc</a></li>
+                        <li class="header__search-history-icon"><a href="./Chi tiết về ốc hương.html">Ốc hương</a></li>
+                        <li class="header__search-history-icon"><a href="./Chi tiết về ốc móng tay.html">Ốc móng tay</a></li>
+                        <li class="header__search-history-icon"><a href="./Chi tiết về cá hồi.html">Cá hồi</a></li>
+                        <li class="header__search-history-icon"><a href="./Chi tiết về cá thu.html">Cá thu</a></li>
+                        <li class="header__search-history-icon"><a href="./Chi tiết về tôm càng xanh.html">Tôm càng xanh</a></li>
+                        <li class="header__search-history-icon"><a href="./Chi tiết về tôm sú.html">Tôm sú</a></li>
+                    </ul>
+
+                </div>
+                <button class="header__search-btn" > <i class="header__search-btn-icon fas fa-search"></i> </button>
+                </div>
+                <div class="header__cart">
+                    <div class="header__cart-wrap"> <i class="header__cart-icon fas fa-shopping-cart"></i>
+
+                        <!-- NO CART :header__cart-list--no-cart-->
+                        <div class="header__cart-list"> <img src="font/images.png" class="header__cart-no-cart-img"> <span class="header__cart-no-cart-msg">Chưa có sản phẩm</span>
+                            <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                            <form onclick="updatecart()">
+                                <div class="cart-items">
+
+                                </div>
+                            </form>
+                            
+                            <a href="#" class="header__cart-view-cart btn btn--primary" onclick="payment()">Thanh Toán</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a class="active" href="./Trang chủ.html"><i class="fa fa-fw fa-home"></i> Trang chủ</a></li>
+                    <li><a class="active" href="#">Bán chạy</a>
+                        <ul class="sub-menu">
+                            <li><a class="catagory-item__link" href="./Tìm kiếm về cá.html">Cá</a></li>
+                            <li><a class="catagory-item__link" href="./Tìm kiếm về tôm.html">Tôm</a></li>
+                            <li><a class="catagory-item__link" href="./Tìm kiếm về ốc.html">Ốc</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="#">Loại hải sản khác</a>
+                        <ul class="sub-menu">
+                            <li><a class="catagory-item__link" href="">Mực</a>
+                                <ul class="sub-menu1">
+                                    <li><a class="catagory-item__link" href="">Mực ống</a></li>
+                                    <li><a class="catagory-item__link" href="">Mực lá</a></li>
+                                    <li><a class="catagory-item__link" href="">Mực nang (mực mai)</a></li>
+                                    <li><a class="catagory-item__link" href="">Mực trứng (mực ghim)</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="catagory-item__link" href="">Sò</a>
+                                <ul class="sub-menu1">
+                                    <li><a class="catagory-item__link" href="">Sò điệp</a></li>
+                                    <li><a class="catagory-item__link" href="">Sò dẹo</a></li>
+                                    <li><a class="catagory-item__link" href="">Sò huyết</a></li>
+                                    <li><a class="catagory-item__link" href="">Sò lông</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="catagory-item__link" href="">Cua</a>
+                                <ul class="sub-menu1">
+                                    <li><a class="catagory-item__link" href="">Cua tuyết</a></li>
+                                    <li><a class="catagory-item__link" href="">Cua huỳnh đế</a></li>
+                                    <li><a class="catagory-item__link" href="">Cua Alaska</a></li>
+                                    <li><a class="catagory-item__link" href="">Cua Tasmania</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="catagory-item__link" href="">Ghẹ</a>
+                                <ul class="sub-menu1">
+                                    <li><a class="catagory-item__link" href="">Ghẹ đỏ</a></li>
+                                    <li><a class="catagory-item__link" href="">Ghẹ xanh</a></li>
+                                    <li><a class="catagory-item__link" href="">Ghẹ ba chấm</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="./Giới thiệu.html"><i class=""></i> Giới thiệu</a></li>
+                    <li><a class="active" href="./Liên hệ.html"><i class="fa fa-fw fa-envelope"></i> Liên hệ</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </header>
+
+        <!-- Giới thiệu -->
+        <div class="containt_introduce">
+            <div class="introduce">
+                <div class="introduce_top">
+                    <h1 class="introduce_heading"><b>Giới Thiệu Về Cửa hàng</b></h1>
+                    <div class="introduce_top_img">
+                        <img src="./image/giới thiệu.jpg" alt="" class="top_img">
+                    </div>
+                    <div class="introduce_text" >
+                       <p>
+                            Hải sản là một trong những nhóm thực phẩm được nhiều người ưa thích. Và mức giá của loại thực phẩm này cũng cao hơn so với các loại thực phẩm khác. Tuy nhiên, do mang giá trị dinh dưỡng cao, lại ít chất độc hại nên rất nhiều người đã lựa chọn hải sản là một trong những nguồn thực phẩm chính trong bữa ăn hàng ngày của gia đình mình. Và cũng vì nhu cầu tiêu thụ hải sản ngày càng cao nên kinh doanh hải sản đang là lĩnh vực kinh doanh được nhiều người lựa chọn thử sức.
+
+                            Thế Giới Hải Sản chúng tôi cũng là một trong những Start-up mới của lĩnh vực này nhưng đã nhận được sự quan tâm, ủng hộ của đông đảo khách hàng trên cả nước. Đơn giản bởi sản phẩm đa dạng, chất lượng đảm bảo và chính sách bán hàng tốt nhất dành cho khách hàng.
+                       </p> <br>
+                       <p>  
+                        Trong kinh doanh hải sản, nguồn cung hải sản như thế nào, chất lượng ra sao sẽ quyết định rất lớn tới sự thành công của doanh nghiệp. Để có được những hải sản tươi ngon nhất, chất lượng đảm bảo nhất, Huy Hải Sản chúng tôi nhập hàng trực tiếp tại khu vực đánh bắt và nuôi trồng ở Quảng Ninh, Hải Phòng và một số tỉnh miền Trung, miền Nam. Tuyệt đối không lấy hải sản qua trung gian, vừa không tươi ngon, chất lượng lại không đảm bảo và mức giá cũng không thực sự hợp lý.
+
+                        Với hải sản được nuôi trồng như tôm sú, tôm càng, ngao, cua, hến, hàu, sò… chúng tôi tới trực tiếp khu nuôi, bè nuôi để tìm hiểu cách nuôi trồng, đảm bảo nguồn hàng sạch, không sử dụng hóa chất rồi mới quyết định nhập hàng.
+                       </p> 
+                    </div> 
+                </div>
+               <section class="desktop container hidden-xs" id="palo-service">
+                   <div class="col-md-12 nopadding"> 
+                       <div class="top_service">
+                           <div class="top_service_left">
+                               <img src="./image/icon1.png" alt="" class="introduce_img">
+                           <div class="text-box">
+                               <span><b> "Hơn 10,000+ khách hàng tin dùng"</b></span><br>
+                           </div>
+                           <span class="description">  
+                               " Với kinh nghiệm 12 năm trong ngành hải sản, Thế Giới Hải Sản tự tin đem đến cho bạn 
+                               những loại hải sản có nguồn gốc xuất xứ rõ ràng, hải sản còn tươi ngon hoặc được làm khô theo đúng quy trình, đảm bảo chất lượng tốt nhất."		
+                           </span>
+                           </div>
+                       <div class="top_service_right">
+                           <img src="./image/khách hàng.jpg" alt="" class="right_img">
+                       </div>    
+                       </div>
+                       <div class="top_service">
+                           <div class="top_service_left">
+                               <img src="./image/icon2.png" alt="" class="introduce_img">
+                           <div class="text-box">
+                               <span><b>"Thanh toán trực tuyến nhanh chóng"</b></span><br>
+                           </div>
+                           <span class="description">      
+                               " Thanh toán trực tiếp một cách dễ dàng với nhiều phương thức: 1. COD (thanh toán 
+                               tiền mặt ngay khi nhận hàng) 2. Chuyển khoản ngân hàng 3. VISA - MASTER CARD tại 
+                               hệ thống cửa hàng. "
+                           </span>
+                           </div>
+                           <div class="top_service_right">
+                               <img src="./image/thanh toán.jpg" alt="" class="right_img">
+                           </div>
+                       </div>
+                       <div class="top_service">
+                           <div class="top_service_left">
+                               <img src="./image/icon3.png" alt="" class="introduce_img">
+                           <div class="text-box">
+                               <span><b>"Giao hàng tận nơi không cần chờ đợi"</b></span><br>
+                           </div>
+                           <span class="description">             
+                            " Không chỉ phục vụ mỗi khách hàng có nhu cầu mua hải sản trực tiếp tại cửa hàng, 
+                            Thế Giới Hải Sản chúng tôi còn nhận vận chuyển hải sản với khách ở xa khi mua online qua website, facebook. 
+                            Tùy địa điểm gần hay xa cửa hàng mà thời gian vận chuyển nhanh hay chậm. 
+                            Tuy nhiên, chúng tôi cam kết giao hàng ngay trong ngày và hải sản tới tay khách hàng vẫn còn tươi sống."
+                           </span>
+                           </div>
+                           <div class="top_service_right">
+                               <img src="./image/giao hàng.jpeg" alt="" class="right_img">
+                           </div>
+                       </div>
+                       <div class="top_service">
+                           <div class="top_service_left">
+                               <img src="./image/icon4.png" alt="" class="introduce_img">
+                               <div class="text-box">
+                                   <span><b>"Hải sản giống hình 100% không cắt ghép"</b></span><br>
+                               </div>
+                               <span class="description">                   
+                                   "Hải sản mà quý khách hàng xem trên website phần lớn đều được chụp từ hải sản thật do chúng tôi tự chụp. Tuy nhiên, tùy từng thời điểm, tùy từng loại hải sản khác nhau mà quy cách về cân nặng, kích thước có sự biến đổi. Nhưng chất lượng vẫn được đảm bảo tươi ngon nhất.
+
+                                   Quý khách hàng sẽ được kiểm tra chất lượng sản phẩm khi nhận hàng. Nếu thấy không hài lòng, khách hàng có quyền không nhận, hoặc chúng tôi sẽ có chính sách đổi trả, hoàn tiền cho khách thỏa đáng nhất."
+                               </span>
+                           </div>
+                           <div class="top_service_right">
+                               <img src="./image/giống với khác.jpg" alt="" class="right_img">
+                           </div>
+                       </div>
+                   </div>
+                   <div class="top_service">
+                       <div class="top_service_left">
+                           <img src="./image/icon5.png" alt="" class="introduce_img">
+                           <div class="text-box">
+                               <span><b>"Chính sách ưu đãi tuyệt vời cho khách hàng"</b></span><br>
+                           </div>
+                           <span class="description">                   
+                               
+                               "MIỄN PHÍ VẬN CHUYỂN cho khách hàng mua hàng với hóa đơn từ 1.000.000 đồng trở lên.
+                               Tích điểm tuyệt vời cho khách hàng thân thiết. Mua 50.000 đồng = 1 điểm; 1 điểm = 1.000 đồng và được tích vào thẻ tích điểm, trừ trực tiếp vào hóa đơn cho những lần mua hàng tiếp theo.
+                               Giảm ngay 3% giá trị hóa đơn khi khách mua với tổng đơn hàng từ 20 triệu trở lên. Giảm 5% với khách hàng có tổng giá trị đơn hàng từ 70 triệu trở lên. "
+                       
+                           </span>
+                       </div>
+                       <div class="top_service_right">
+                           <img src="./image/ưu đãi.jpg" alt="" class="right_img">
+                       </div>
+                   </div>
+                   </div> 
+   
+               </section>
+           </div> 
+        </div>
+        
+             
+             
+             
+             
+  
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-4-1">
+                        <h3 class="footer__heading">Thông tin liên hệ</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item"> 
+                                <div class="hotline-bt">
+                                    <a class="hotline-bt__detail" title="Tư Vấn Bán Hàng">
+                            1900 0325
+                        <span>
+                            <i class="fas fa-phone-square-alt"></i>
+                            Tư vấn bán hàng
+                        </span>
+                        </a>
+                                </div>
+                            </li>
+                            <li class="footer__item"> 
+                                <div class="hotline-bt">
+                                    <a class="hotline-bt__detail" title="Hỗ Trợ Dịch Vụ">
+                            0924 714 551
+                        <span>
+                            <i class="far fa-comment-alt"></i>
+                            Hỗ trợ dịch vụ
+                        </span>
+                        </a>
+                                </div>
+                            </li>
+                            <li class="footer__item"> 
+                                <div class="hotline-bt">
+                                    <a class="hotline-bt__detail" title="Tư Vấn Kĩ Thuật">
+                            0924 714 551
+                        <span>
+                            <i class="fas fa-cog"></i>
+                            Tư vấn kĩ thuật
+                        </span>
+                        </a>
+                                </div>
+                            </li>
+                        </ul>
+                          
+                    </div>
+                    <div class="grid__column-2-4-1">
+                        <h3 class="footer__heading">hỗ trợ</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Chăm sóc khách hàng</a> </li>
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Hướng dẫn đặt hàng</a> </li>
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Hướng dẫn thanh toán</a> </li>
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Mua lại hải sản</a> </li>
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Giao hàng tận nơi</a> </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4-1">
+                        <h3 class="footer__heading">Liên kết</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Bán chạy</a> </li>
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Mực</a> </li>
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Sò</a> </li>
+                            <li class="footer__item"> <a href="Giới thiệu.html" class="footer__item-link">Giới thiệu</a> </li>
+                            <li class="footer__item"> <a href="Liên hệ.html" class="footer__item-link">Liên hệ</a> </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4-1">
+                        <h3 class="footer__heading">Tiện ích</h3>
+                        <ul class="footer__list">
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Cách chọn hải sản tươi ngon</a> </li>
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Tuyển dụng</a> </li>
+                            <li class="footer__item"> <a href=" " class="footer__item-link">Tải ứng dụng đặt hàng:</a> </li>
+                            <li class="footer__item"> <img src="./image/appstore.jpg" alt=""></li>
+                            <li class="footer__item"> <img src="./image/googleplay.jpg" alt=""></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="grid">
+                    <p class="footer__text">@THẾ GIỚI HẢI SẢN.vn</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="./js/jsweb.js"></script>
+    
+</body>
